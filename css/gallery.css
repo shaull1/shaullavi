@@ -1,0 +1,188 @@
+
+
+
+
+/* עיצוב הטקסט הראשי */
+main {
+    padding: 50px;
+    text-align: center;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* עבור עמודי אלבומים */
+.hero-album {
+    background: url('/imglog/wedding-background.jpg') no-repeat center center/cover;
+    height: 50vh;
+}
+
+.album-content {
+    padding: 20px;
+    text-align: center;
+    color: #eb1515;
+    background: linear-gradient(to bottom, #333, #111);
+}
+
+.album-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #c5c0c0;
+}
+
+.album-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.album-gallery img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.album-gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+/* עיצוב video */
+.video-container {
+    position: relative;
+    width: 640px;
+    max-width: 100%;
+    margin: 20px auto;
+    border: 5px solid #f50606;
+    border-radius: 15px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e1e1e, #444);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.video-container::before { /* אפקט צבע רקע */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 0, 150, 0.3), rgba(0, 255, 255, 0.3));
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 1;
+}
+  
+.video-container:hover { /* אפקט רחף */
+    box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.video-container video::-webkit-media-controls-panel {
+    background: #222 !important;
+    border-radius: 0 0 15px 15px;
+}
+
+.video-container video::-webkit-media-controls-play-button {
+    filter: brightness(0.8);
+    border-radius: 50%;
+    background: #4f17e8 !important;
+}
+ 
+ 
+.video-container video::-webkit-media-controls-play-button:hover {
+    filter: brightness(1);
+    transform: scale(1.1);
+}
+
+/* עיצוב כללי לתפריט הקבוע */
+.fixed-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+
+
+/* עיצוב כללי לתמונה המתפצלת */
+.split-image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 9999; /* לוודא שזה מעל כל האלמנטים */
+    background-color: black; /* רקע כהה */
+    overflow: hidden;
+}
+
+/* עיצוב שני חלקי התמונה */
+.split-image {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 1.5s ease;
+}
+
+/* תמונה שמאלית */
+.split-image.left {
+    background-image: url('/albums/wedding/slJv6d-T.jpeg'); /* החלף לנתיב התמונה שלך */
+    transform: translateX(0);
+}
+
+/* תמונה ימנית */
+.split-image.right {
+    background-image: url('/albums/wedding/slJv6d-T.jpeg'); /* החלף לנתיב התמונה שלך */
+    transform: translateX(0);
+}
+
+/* אנימציה לפתיחת התמונה */
+.split-image-container .left {
+    animation: slideLeft 3s forwards;
+}
+
+.split-image-container .right {
+    animation: slideRight 3s forwards;
+}
+
+/* אנימציות */
+@keyframes slideLeft {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideRight {
+    100% {
+        transform: translateX(100%);
+       }
+}
+
+
+
+
+
+
+

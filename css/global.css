@@ -1,0 +1,374 @@
+/* סגנון כללי */
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to bottom, #1a1a1a, #444);
+    color: hsla(60, 36%, 90%, 0.779);
+    overflow-x: hidden;
+    direction: rtl; /* מגדיר את כיוון הכתיבה מימין לשמאל */
+    text-align: right; /* מיישר את הטקסט לצד ימין */
+    
+}
+
+
+/* כותרת */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('imglog/surreal_background.jpg') no-repeat center center/cover;
+    color: #fa0101d8; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #000;
+}
+
+
+
+.hero-content p {  /* כותרת  */
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+.btn { /* כפתור */
+    background: #ff402bc8;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: #e55a4e;
+}
+
+
+
+
+
+
+
+
+
+
+/* ציטוט אומנותי */
+.quote-section {
+    background: #1a1a1a;
+    color: #f3f3f3;
+    text-align: center;
+    padding: 50px 20px;
+    font-style: italic;
+}
+blockquote {  
+    font-size: 1.5rem;
+    margin: 0 auto;
+    max-width: 700px;
+    position: relative;
+    padding-left: 20px;
+}
+
+blockquote::before {
+    content: "“";
+    font-size: 4rem;
+    color: #ff6f61;
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+
+
+/* עיצוב כללי לתפריט הקבוע */
+.fixed-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.menu-btn {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #6a1b9a, #8e24aa);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 00px 12px 12px rgba(90, 233, 23, 0.3);
+    transition: all 0.03s ease-in-out;
+    text-align: center;
+}
+
+/* אפקט עכבר */
+.menu-btn:hover {
+    background: linear-gradient(45deg, #2d24aa, #ff93b1);
+    transform: scale(1.1);
+    box-shadow: 0px 6px 10px rgba(247, 245, 245, 0.5);
+}
+
+/* אפקט עכבר */
+.menu-btn:hover {
+    background: linear-gradient(45deg, #2d24aa, #ff93b1);
+    transform: scale(1.1);
+    box-shadow: 0px 6px 10px rgba(247, 245, 245, 0.5);
+}
+
+
+/* פוטר */
+footer {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+}
+*/
+
+
+
+/* תצוגה של תפריט גלריה */
+.gallery-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #222;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.111s;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 02px 03px 30px rgb(255, 225, 0);
+}
+
+
+
+
+
+/* קטע טקסט ----------*/
+/*  יצירת קשר טופס תפריט*/
+.contact-section {
+    padding: 30px 20px;
+    background: linear-gradient(to bottom, #474040, #000000);
+    text-align: center;
+    box-shadow: 02px 03px 10px rgb(255, 225, 0);
+   
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 05px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+form button {
+    background: #ff0000fc;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+form button:hover {
+    background:linear-gradient(to bottom, #000000, #ff8c00);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* קישורים לרשתות חברתיות */
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #ff6f61;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1rem;
+}
+
+.social-links a:hover {
+    color: #e55a4e;
+}
+
+
+
+
+
+
+* עיצוב גוף הדף */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* מיקום הלוגו */
+.logo-container {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 23;
+}
+
+/* עיצוב הלוגו */
+.logo-container img {
+    width: 20px;
+    height: 80px;
+    border-radius: 100%;
+    box-shadow: 0 4px 6px rgba(255, 144, 144, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* אפקטים בלחיצה או ריחוף על הלוגו */
+.logo-container img:hover {
+    box-shadow: 0 123px 200px rgba(0, 0, 0, 0.3);
+}
+
+.logo-container img:active {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.three-dimensional-logo:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4), 
+                0px 0px 20px rgba(0, 0, 0, 0.25) inset;
+}
+/* עיצוב הטקסט הראשי */
+main {
+    padding: 50px;
+    text-align: center;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    position: fixed; /* כדי שהלוגו והווטסאפ יישארו קבועים */
+    top: 0;
+    left: 0;
+    width: 100%; /* רוחב מלא */
+    background-color: rgba(255, 255, 255, 0.9); /* רקע לבן שקוף */
+    padding: 10px;
+    z-index: 1000; /* מקדימות גבוהה */
+    display: flex;
+    justify-content: center; /* מיקום במרכז */
+    align-items: center;
+    gap: 1000px; /* רווח בין הלוגו לסמל */
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column; /* מסדר את הסמל מתחת ללוגו */
+    align-items: center;
+}
+
+.logo-container img {
+    width: 50px; /* גודל הלוגו */
+    height: 50px;
+    border-radius: 50%; /* עיגול הפינות */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.logo-container img:hover {
+    transform: scale(2.23); /* אפקט הגדלה בלחיצה */
+}
+
+.whatsapp-icon img {
+    width: 100px; /* גודל האייקון של ווטסאפ */
+    height: 100px;
+    border-radius: 80%;
+    transition: transform 0.6s ease;
+    cursor: pointer;
+}
+
+/* עיצוב לתאימות מסכים קטנים */
+@media (max-width: 768px) {
+    .menu-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+
+
+
+
+
+
