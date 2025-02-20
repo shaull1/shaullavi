@@ -16,7 +16,7 @@ body {
     position: relative;
     height: 100vh;
     background: url('imglog/surreal_background.jpg') no-repeat center center/cover;
-    color: #fa0101d8; 
+    color:   #ffc336e6; 
     text-align: center;
     display: flex;
     justify-content: center;
@@ -82,6 +82,7 @@ body {
 
 
 
+
 /* ציטוט אומנותי */
 .quote-section {
     background: #1a1a1a;
@@ -124,7 +125,7 @@ blockquote::before {
     font-size: 16px;
     font-weight: bold;
     color: white;
-    background: linear-gradient(45deg, #6a1b9a, #8e24aa);
+    background: linear-gradient(45deg, #ffffff, #8e24aa);
     padding: 10px 20px;
     border-radius: 8px;
     box-shadow: 00px 12px 12px rgba(90, 233, 23, 0.3);
@@ -166,6 +167,9 @@ footer {
     background: #222;
 }
 
+
+
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -188,7 +192,7 @@ footer {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 02px 03px 30px rgb(255, 225, 0);
+    box-shadow: 02px 02px 10px rgb(255, 251, 221);
 }
 
 
@@ -201,7 +205,7 @@ footer {
     padding: 30px 20px;
     background: linear-gradient(to bottom, #474040, #000000);
     text-align: center;
-    box-shadow: 02px 03px 10px rgb(255, 225, 0);
+    box-shadow: 02px 03px 04px rgb(255, 170, 0);
    
 }
 
@@ -274,39 +278,53 @@ body {
     background-color: #f0f0f0;
 }
 
+
+
 /* מיקום הלוגו */
 .logo-container {
     position: fixed;
     top: 20px;
     right: 30px;
-    z-index: 23;
+    z-index: 100;
 }
 
-/* עיצוב הלוגו */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
 .logo-container img {
-    width: 20px;
-    height: 80px;
-    border-radius: 100%;
-    box-shadow: 0 4px 6px rgba(255, 144, 144, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    width: 100px;
+    height: auto;
+    transition: 0.3s;
 }
 
-/* אפקטים בלחיצה או ריחוף על הלוגו */
 .logo-container img:hover {
-    box-shadow: 0 123px 200px rgba(0, 0, 0, 0.3);
-}
-
-.logo-container img:active {
     transform: scale(1.1);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
 }
 
-.three-dimensional-logo:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4), 
-                0px 0px 20px rgba(0, 0, 0, 0.25) inset;
+/* עיצוב כפתור הווטסאפ */
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transition: transform 0.3s;
 }
+
+.whatsapp-icon img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
 /* עיצוב הטקסט הראשי */
 main {
     padding: 50px;
@@ -339,23 +357,26 @@ body {
 }
 
 .logo-container img {
-    width: 50px; /* גודל הלוגו */
-    height: 50px;
+    width: 90px; /* גודל הלוגו */
+    height: 90px;
     border-radius: 50%; /* עיגול הפינות */
     transition: transform 0.3s ease;
     cursor: pointer;
 }
 
 .logo-container img:hover {
-    transform: scale(2.23); /* אפקט הגדלה בלחיצה */
+    transform: scale(1.23); /* אפקט הגדלה בלחיצה */
 }
 
+
 .whatsapp-icon img {
-    width: 100px; /* גודל האייקון של ווטסאפ */
-    height: 100px;
+    width: 90px; /* גודל האייקון של ווטסאפ */
+    height: 90px;
     border-radius: 80%;
     transition: transform 0.6s ease;
     cursor: pointer;
+ margin-right: 100px; /* רווח בין הלוגו לווטסאפ */
+    
 }
 
 /* עיצוב לתאימות מסכים קטנים */
