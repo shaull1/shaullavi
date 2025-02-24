@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="lightbox2-dev">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lightbox2-dev.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

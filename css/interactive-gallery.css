@@ -1,0 +1,39 @@
+.interactive-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 80vh;
+    gap: 10px;
+}
+
+.gallery-item {
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery-item:nth-child(1) {
+    background-image: url('ums/famliy/family.html');
+}
+
+.gallery-item:nth-child(2) {
+    background-image: url('/nature/2024-09-14\ 00.29.28.JP');
+}
+.gallery-item:nth-child(3) {
+    background-image: url('/ms/wedding/m1.jpeg');
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.gallery-caption {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #ff6f61;
+    font-weight: bold;
+}

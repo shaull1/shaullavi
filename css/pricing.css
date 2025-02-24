@@ -1,0 +1,119 @@
+/* עיצוב כללי לכותרת הראשית */
+.pricing-header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(45deg, #c72222, #3a9298);
+    color: white;
+    border-bottom: 5px solid #d81b60;
+}
+
+.pricing-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.pricing-header p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* עיצוב מכולת הכרטיסים */
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* עיצוב כל כרטיס */
+.pricing-card {
+    background: rgb(255, 244, 225);
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #ddd;
+}
+
+/* מסגרת לכרטיס נבחר */
+.pricing-card.featured {
+    border: 2px solid #d58ea8;
+    transform: scale(1.05);
+}
+
+/* אפקט רחף */
+.pricing-card:hover {
+    transform: scale(1.3);
+    box-shadow: 5px 10px 15px rgba(236, 180, 180, 0.5);
+}
+
+/* עיצוב הכותרת */
+.pricing-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #1e3c72;
+}
+
+/* עיצוב המחיר */
+.pricing-card .price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffa2c4;
+}
+
+/* עיצוב הרשימה */
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 1rem;
+    color: #555;
+}
+
+.pricing-card ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.pricing-card ul li::before {
+    content: '✔';
+    color: #1e3c72;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* עיצוב כפתור */
+.pricing-card .btn {
+    text-decoration: none;
+    color: white;
+    background: #1e3c72;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.pricing-card .btn:hover {
+    background: #f3a2c0;
+}
+
+
+
+
+
+/* פוטר */
+footer {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+}
