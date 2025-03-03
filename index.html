@@ -10,6 +10,8 @@
     <link rel="apple-touch-icon" href="imglog/logo.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shaul Photography</title>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 </head>
 <body></body>
     <!--תפריט ניווט קבוע בצד שמאל -->
@@ -68,27 +70,26 @@
                         <h3>צבא</h3>
                     </a>
                 </div>
-            </div> <!-- סגירת ה-gallery בצורה נכונה -->
+            </div> <!-- סגירת ה-gallery בצורה נכונה --> 
         </section>
     </main>
-        <!-- טופס יצירת קשר -->
-        <section id="contact" class="contact-section">
-            <h2> השאירו פרטים</h2>
-            <form>
-                <label for="name">שם:</label>
-                <input type="text" id="name" name="name" required>
+    <form id="contact-form">
+        <label for="name">שם:</label>
+        <input type="text" id="name" name="user_name" required>
 
-                <label for="email">אימייל:</label>
-                <input type="email" id="email" name="email" required>
+        <label for="phone">טלפון:</label>
+        <input type="tel" id="phone" name="user_phone" required pattern="[0-9]{10}" placeholder="הקלד מספר טלפון">
 
-                <label for="message">הודעה:</label>
-                <textarea id="message" name="message" required></textarea>
+        <label for="message">הודעה:</label>
+        <textarea id="message" name="message" required></textarea>
 
-                <button type="submit">שלח</button>
+        <button type="submit">שלח</button>
 
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-            </form>
-        </section>
+        <p id="error-message" class="error-message">אנא מלא את כל השדות</p>
+    </form>
+
+
+
     </main>
     <div class="interactive-gallery">
         <div class="gallery-item" data-caption="רגעי אהבה"></div>
@@ -153,5 +154,6 @@
 <div class="snowflake small pink"></div>
     
     <script src="script.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
 </html>

@@ -1,24 +1,31 @@
-// הסרת האנימציה לאחר כמה שניות
-setTimeout(() => {
-    document.getElementById('splitImageContainer').style.display = 'none';
-}, 4000); // 4000 מילישניות = 4 שניות
+document.addEventListener("DOMContentLoaded", function() {
+    // אתחול EmailJS עם המפתח הציבורי שלך
+    emailjs.init("mm5MmpmLFVMbigN4I"); // הכנס את ה-Public Key שלך מ-EmailJS
 
-
-
-
-    // אתחול EmailJS עם המזהה הפומבי שלך
-    emailjs.init("894834523374");
-
-    // מאזין לטופס כדי למנוע טעינת דף
+    // קבלת הטופס והאזנה לאירוע השליחה
     document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // מונע טעינה מחדש של הדף
+        event.preventDefault(); // למנוע רענון דף
+        
+        // בדיקת שדות ריקים
+        const name = this.user_name.value.trim();
+        const phone = this.user_phone.value.trim();
+        const message = this.message.value.trim();
 
-        // שימוש בפרטי הפרויקט
-        emailjs.sendForm("acoustic-portal-444610-c8", "template_xxx5tam", this)
+        if (!name || !phone || !message) {
+            document.getElementById("error-message").style.display = "block";
+            return;
+        } else {
+            document.getElementById("error-message").style.display = "none";
+        }
+
+        // שליחת הנתונים דרך EmailJS
+        emailjs.sendForm("service_0xkqci5", "template_5q3a8am", this)
             .then(function() {
                 alert("ההודעה נשלחה בהצלחה!");
+                document.getElementById("contact-form").reset();
             }, function(error) {
-                alert("שגיאה בשליחת ההודעה: " + JSON.stringify(error));
+                alert("שגיאה בשליחה, נסה שוב.");
+                console.error("EmailJS Error:", error);
             });
     });
-
+});
