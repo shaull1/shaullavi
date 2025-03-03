@@ -7,10 +7,7 @@ body {
     overflow-x: hidden;
     direction: rtl; /* מגדיר את כיוון הכתיבה מימין לשמאל */
     text-align: right; /* מיישר את הטקסט לצד ימין */
-    
 }
-
-
 /* כותרת */
 .hero {
     position: relative;
@@ -23,7 +20,6 @@ body {
     align-items: center;
     overflow: hidden;
 }
-
 .hero .overlay {
     position: absolute;
     top: 0;
@@ -54,9 +50,6 @@ body {
 }
 
 
-
-
-
 .btn { /* כפתור */
     background: #ff402bc8;
     color: #ffffff;
@@ -72,15 +65,6 @@ body {
 .btn:hover {
     background: #e55a4e;
 }
-
-
-
-
-
-
-
-
-
 
 
 /* ציטוט אומנותי */
@@ -168,8 +152,6 @@ footer {
 }
 
 
-
-
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -194,9 +176,6 @@ footer {
     border-radius: 10px;
     box-shadow: 02px 02px 10px rgb(255, 251, 221);
 }
-
-
-
 
 
 /* קטע טקסט ----------*/
@@ -386,6 +365,63 @@ body {
         padding: 8px 15px;
     }
 }
+
+/* עיצוב פתיתי שלג */
+.snowflake {
+    position: fixed;
+    top: 0;
+    border-radius: 50%;
+    opacity: 0;
+    animation: snowfall linear infinite;
+}
+
+/* פתיתים גדולים וקטנים */
+.snowflake.small { width: 60px; height: 60px; }
+.snowflake.medium { width: 15px; height: 15px; }
+.snowflake.large { width: 25px; height: 25px; }
+
+/* צבעים קרים ונעימים */
+.snowflake.blue { background: #ffff9c; }    /* כחול קרח */
+.snowflake.white { background: #ffa2a2; }   /* לבן רגיל */
+.snowflake.purple { background: #66ffe0; }  /* סגול עדין */
+.snowflake.turquoise { background: #eeff8f; } /* טורקיז רך */
+.snowflake.pink { background: #ff43ff; }  /* ורוד קריר */
+
+/* פתיתים עם מיקומים וזמני נפילה שונים */
+.snowflake:nth-child(1) { left: 3%; animation-duration: 5s; animation-delay: 0s; }
+.snowflake:nth-child(2) { left: 10%; animation-duration: 6s; animation-delay: 1s; }
+.snowflake:nth-child(3) { left: 20%; animation-duration: 5.5s; animation-delay: 2s; }
+.snowflake:nth-child(4) { left: 30%; animation-duration: 7s; animation-delay: 1.5s; }
+.snowflake:nth-child(5) { left: 40%; animation-duration: 6s; animation-delay: 3s; }
+.snowflake:nth-child(6) { left: 50%; animation-duration: 5.5s; animation-delay: 2.5s; }
+.snowflake:nth-child(7) { left: 60%; animation-duration: 6.5s; animation-delay: 3.5s; }
+.snowflake:nth-child(8) { left: 70%; animation-duration: 7s; animation-delay: 4s; }
+.snowflake:nth-child(9) { left: 80%; animation-duration: 5s; animation-delay: 2.5s; }
+.snowflake:nth-child(10) { left: 90%; animation-duration: 6s; animation-delay: 1s; }
+.snowflake:nth-child(11) { left: 95%; animation-duration: 8s; animation-delay: 2s; }
+.snowflake:nth-child(12) { left: 12%; animation-duration: 7s; animation-delay: 2s; }
+.snowflake:nth-child(13) { left: 25%; animation-duration: 5.5s; animation-delay: 1s; }
+.snowflake:nth-child(14) { left: 38%; animation-duration: 6s; animation-delay: 1.5s; }
+.snowflake:nth-child(15) { left: 55%; animation-duration: 8s; animation-delay: 3s; }
+.snowflake:nth-child(16) { left: 67%; animation-duration: 7s; animation-delay: 2.5s; }
+.snowflake:nth-child(17) { left: 75%; animation-duration: 6.5s; animation-delay: 4s; }
+.snowflake:nth-child(18) { left: 85%; animation-duration: 6s; animation-delay: 3s; }
+.snowflake:nth-child(19) { left: 92%; animation-duration: 7s; animation-delay: 3.5s; }
+.snowflake:nth-child(20) { left: 98%; animation-duration: 5s; animation-delay: 2s; }
+
+
+.snowflake {
+    width: calc(5px + 10 * (rand(0.5, 1))); /* גודל רנדומלי */
+    height: calc(5px + 10 * (rand(0.5, 1)));
+    opacity: calc(0.6 + rand(0.4, 1)); /* רנדומלי בין 0.6 ל-1 */
+}
+@keyframes snowfall {
+    0% { transform: translateY(-100px) translateX(0); opacity: 1; }
+    50% { transform: translateY(50vh) translateX(-10px); opacity: 1; }
+    100% { transform: translateY(100vh) translateX(10px); opacity: 0; }
+}
+
+
 
 
 
