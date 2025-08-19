@@ -4,9 +4,10 @@ const path = require('path');
 
 const app = express();
 const PORT = 3000;
-playButton = document.getElementById('playButton');
-const introScreen = document.getElementById('introScreen');
-const gameScreen = document.getElementById('gameScreen');
+
+// These variables were referencing DOM elements which do not exist in the
+// Node.js environment. They caused a ReferenceError when the server started.
+// Removing them ensures the server runs correctly.
 
 // משרת קבצים סטטיים
 app.use(express.static(path.join(__dirname)));
@@ -24,7 +25,7 @@ app.get('/get-images', (req, res) => {
 
         const images = files.filter(file => {
             const ext = path.extname(file).toLowerCase();
-            return ext === '.jpg' || ext === '.png';
+            return ['.jpg', '.jpeg', '.png'].includes(ext);
         });
 
         res.json(images);
